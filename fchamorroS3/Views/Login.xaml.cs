@@ -16,6 +16,7 @@ public partial class Login : ContentPage
     }
     private void btnRegistro_Clicked(object sender, EventArgs e)
     {
+        Navigation.PushAsync(new Registro());
        
 
     }

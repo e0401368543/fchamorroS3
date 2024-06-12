@@ -7,6 +7,6 @@ public partial class Home : ContentPage
 	public Home(string nombre)
 	{
 		InitializeComponent();
-        lblNombre.Text = nombre;
+        lblNombre.Text = "Bienvenido"+ nombre;
     }
 }

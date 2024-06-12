@@ -5,8 +5,20 @@
              Title="Registro">
     <VerticalStackLayout>
         <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
+            Text="Ventana de Registro"
+            FontSize="20"
+            HorizontalTextAlignment="Center"/>
+
+        <Entry x:Name="txtUsuario"
+               Placeholder="Ingrese Usuario"
+               />
+        <Entry x:Name="txtContrasena"
+               Placeholder="Ingrese Contraseña"
+               />
+
+        <Button x:Name="btnGuardar"
+                Text="Guardar"
+                Clicked="btnGuardar_Clicked"
+                />
     </VerticalStackLayout>
 </ContentPage>
