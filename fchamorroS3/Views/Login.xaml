@@ -10,23 +10,64 @@
             HorizontalTextAlignment="Center" 
             FontSize="20"
             TextColor="Red"/>
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>                
+            </Grid.ColumnDefinitions>
 
-        <Entry x:Name="txtUauRIO"
-           Placeholder="INGRESE USUARIO"
-           />   
-        <Entry x:Name="txtContraseña"
-        Placeholder="INGRESE Contraseña"
-        />
+            <Label Text="USUARIO"
+                   HorizontalOptions="Center"
+                   FontSize="18"
+                   Grid.Row="0"
+                   Grid.Column="0" />
+            
+            <Entry x:Name="txtUauRIO"
+                Placeholder="INGRESE USUARIO"
+                   FontSize="18"
+                   Grid.Row="0"
+                   Grid.Column="1"
+                   
+                   />
 
-        <Button x:Name="btnIngresar"
-        Text="Iniciar Sesion"
-        Clicked="btnIngresar_Clicked"
-        />
+            <Label Text="CONTRASEÑA"
+               HorizontalOptions="Center"
+               FontSize="18"
+               Grid.Row="1"
+               Grid.Column="0" />
+            <Entry x:Name="txtContraseña"
+                   FontSize="18"
+                    Grid.Row="1"
+                    Grid.Column="1"
+                Placeholder="INGRESE Contraseña"
+                />
 
-        <Button x:Name="btnRegistro"
-        Text="Registro"
-        Clicked="btnRegistro_Clicked"
-        />
+
+            <Button x:Name="btnIngresar"
+                 Text="Iniciar Sesion"
+                    FontSize="18"
+                     Grid.Row="3"
+                     Grid.Column="0"
+                 Clicked="btnIngresar_Clicked"
+                 />
+       
+
+            <Button x:Name="btnRegistro"
+                     FontSize="18"
+                      Grid.Row="3"
+                      Grid.Column="1"
+                     Text="Registro"
+                     Clicked="btnRegistro_Clicked"
+ />
+
+
+        </Grid>
+
 
     </VerticalStackLayout>
 </ContentPage>

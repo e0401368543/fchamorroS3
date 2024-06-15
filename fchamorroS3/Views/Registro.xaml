@@ -2,23 +2,83 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="fchamorroS3.Views.Registro"
+             NavigationPage.HasBackButton="False"
              Title="Registro">
-    <VerticalStackLayout>
+    <VerticalStackLayout Spacing="20"
+                Padding="20">
         <Label 
             Text="Ventana de Registro"
             FontSize="20"
             HorizontalTextAlignment="Center"/>
 
-        <Entry x:Name="txtUsuario"
-               Placeholder="Ingrese Usuario"
-               />
-        <Entry x:Name="txtContrasena"
-               Placeholder="Ingrese Contraseña"
-               />
+        <Grid RowSpacing="15">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
 
-        <Button x:Name="btnGuardar"
+            <Label Text="USUARIO"
+                  HorizontalOptions="Center"
+                  FontSize="18"
+                  Grid.Row="0"
+                  Grid.Column="0" />
+
+            <Entry x:Name="txtUsuario"
+                    HorizontalOptions="Center"
+                    FontSize="16"
+                     Grid.Row="0"
+                     Grid.Column="1" 
+                Placeholder="Ingrese Usuario"
+                />
+
+            <Label Text="Contraseña"
+                  HorizontalOptions="End"
+                  FontSize="16"
+                  Grid.Row="1"
+                  Grid.Column="0" />
+
+            <Entry x:Name="txtContrasena"
+                    Placeholder="Ingrese Contraseña"
+                     HorizontalOptions="End"
+                      FontSize="16"
+                      Grid.Row="1"
+                      Grid.Column="1"
+                    />
+
+           
+
+
+            <Button x:Name="btnGuardar"
+                  HorizontalOptions="CenterAndExpand"
+                     Grid.Row="2"
+                    Grid.Column="0"
                 Text="Guardar"
                 Clicked="btnGuardar_Clicked"
                 />
+
+
+
+            <Button x:Name="btnCancelar"
+                  HorizontalOptions="CenterAndExpand"
+                     Grid.Row="2"
+                    Grid.Column="1"
+                Text="Cancelar"
+                Clicked="btnCancelar_Clicked"
+                />
+
+
+        </Grid>
+
+
+        
+       
+
+        
+        
     </VerticalStackLayout>
 </ContentPage>
